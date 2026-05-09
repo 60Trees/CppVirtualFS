@@ -20,7 +20,10 @@ auto texture =
         / "textures"
         / "block"
         / "stone.png"
-    ); // can load into something like wgpu-native
+    ); // can load into something like opengl
+
+std::vector<vfs::Path> images = fs.ls(vfs::Path() / "assets/minecraft/textures/block/");
+// all textures
 
 auto json =
     fs.get_file_str(
